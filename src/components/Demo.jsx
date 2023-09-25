@@ -8,6 +8,7 @@ const Demo = () => {
     url:'',
     summary:''
   })
+  const [allArticles, setAllArticles] = useState([])
 
   const [getSummary, {error, isFetching}] = useLazyGetSummaryQuery()
 
@@ -17,6 +18,10 @@ const Demo = () => {
 
     if(data?.summary) {
       const newArticle = { ...article, summary: data.summary}
+
+      const updatedAllArticles = [newArticle, ...allArticles]
+
+      setAllArticles(updatedAllArticles)
 
       setArticle(newArticle)
 
