@@ -43,6 +43,12 @@ const Demo = () => {
     navigator.clipboard.writeText(copyUrl)
     setTimeout(()=> setCopied(false), 3000)
   }
+  const handleKeyDown = (e) => {
+    if (e.keyCode === 13) {
+      handleSubmit(e);
+    }
+  };
+  
 
   return (
     <section className="mt-16 w-full max-w-xl">
@@ -62,6 +68,7 @@ const Demo = () => {
             placeholder="Enter a URL"
             value={article.url}
             onChange={(e) => setArticle({ ...article, url: e.target.value })}
+            onKeyDown={handleKeyDown}
             required
             className="url_input peer"
           />
