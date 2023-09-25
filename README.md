@@ -48,7 +48,7 @@ To run this project locally, follow these steps:
 
 2. Enter the URL of the article you want to summarize into the input form.
 
-3. Click the "Summarize" button.
+3. Click the Submit Icon or press Enter.
 
 4. The summarized version of the article will be displayed on the screen.
 ## API Integration
